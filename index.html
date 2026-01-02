@@ -6,6 +6,7 @@
     <title>Yuvraj Kumar | Full Stack Developer</title>
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
     
@@ -112,10 +113,10 @@
         }
 
         .card h3 { margin-top: 0; font-size: 1.4rem; }
-        .card p { color: var(--text-sub); font-size: 0.95rem; flex-grow: 1; }
+        .card p { color: var(--text-sub); font-size: 0.95rem; flex-grow: 1; margin-bottom: 20px; }
 
         /* Tags */
-        .tags { margin: 15px 0; }
+        .tags { margin: 0 0 15px 0; }
         .tag {
             font-family: 'Fira Code', monospace;
             font-size: 0.8rem;
@@ -130,7 +131,7 @@
 
         /* Project Links */
         .project-links {
-            margin-top: 20px;
+            margin-top: auto; /* Pushes link to bottom */
             border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 20px;
         }
@@ -202,8 +203,9 @@
             <div class="card">
                 <h3>Awaaz Setu</h3>
                 <p>
-                    A voice-command system designed to bridge the gap in digital literacy. 
-                    Enables users to access government services using voice commands.
+                    AwaazSetu is a next-generation voice-first platform engineered for the 300M+ Indians who face literacy and language barriers. 
+                    <br><br>
+                    It transforms complex government portals (Cowin, PM Kisan, NFSA) into a simple, spoken conversation, creating a zero-touch digital bridge for the last mile of humanity.
                 </p>
                 <div class="tags">
                     <span class="tag">Python</span>
@@ -220,13 +222,14 @@
             <div class="card">
                 <h3>Sarthi</h3>
                 <p>
-                    An intelligent assistance tool built to streamline complex workflows. 
-                    Designed for utility and efficient navigation.
+                    Sarthi is a native Android assistant built to solve the "Connectivity Gap" in rural India. 
+                    <br><br>
+                    It provides life-critical information via voice, even when the internet is completely unavailable.
                 </p>
                 <div class="tags">
                     <span class="tag">Python</span>
-                    <span class="tag">Backend</span>
-                    <span class="tag">Utility</span>
+                    <span class="tag">Android</span>
+                    <span class="tag">Offline-First</span>
                 </div>
                 <div class="project-links">
                     <a href="https://github.com/Yuvraj1954/Sarthi" target="_blank">
