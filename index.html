@@ -30,16 +30,38 @@
         }
 
         .container {
-            max-width: 850px;
+            max-width: 900px; /* Slightly wider for image */
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Hero Section */
+        /* --- NEW Header Layout --- */
         header {
             padding: 100px 0 80px;
             border-bottom: 1px solid #334155;
         }
+
+        .header-content {
+            display: flex;
+            align-items: flex-start; /* Aligns top of image with top of text */
+            gap: 40px; /* Space between image and text */
+        }
+
+        /* Professional Image Styling */
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* Makes it circular */
+            object-fit: cover; /* Ensures image doesn't stretch */
+            border: 4px solid var(--card); /* Subtle ring border */
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5); /* Shadow for depth */
+            flex-shrink: 0; /* Prevents squishing on smaller screens */
+        }
+
+        .header-text {
+            flex: 1;
+        }
+        /* ------------------------- */
 
         h1 {
             font-size: 3.5rem;
@@ -48,30 +70,32 @@
             background: linear-gradient(to right, #fff, #94a3b8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            line-height: 1.2;
         }
 
         .role {
             font-family: 'Fira Code', monospace;
             color: var(--accent);
             font-size: 1.2rem;
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         .bio {
             color: var(--text-sub);
             font-size: 1.1rem;
             max-width: 600px;
-            margin-top: 25px;
+            margin-top: 20px;
         }
 
-        .social-links { margin-top: 30px; }
+        .social-links { margin-top: 25px; }
         .social-links a {
             color: var(--text-main);
             font-size: 1.6rem;
             margin-right: 25px;
             transition: color 0.3s;
+            display: inline-block;
         }
-        .social-links a:hover { color: var(--accent); }
+        .social-links a:hover { color: var(--accent); transform: translateY(-3px); }
 
         /* Section Headers */
         .section-header {
@@ -131,7 +155,7 @@
 
         /* Project Links */
         .project-links {
-            margin-top: auto; /* Pushes link to bottom */
+            margin-top: auto;
             border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 20px;
         }
@@ -162,8 +186,18 @@
             font-size: 0.9rem;
         }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
+        /* Mobile responsiveness updated for image layout */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 30px;
+            }
+            .bio { margin-left: auto; margin-right: auto; }
+            .social-links { justify-content: center; display: flex; }
+            .social-links a { margin: 0 10px; }
+            h1 { font-size: 2.8rem; }
             header { padding: 60px 0; }
         }
     </style>
@@ -173,23 +207,30 @@
     <div class="container">
         
         <header>
-            <h1>Yuvraj Kumar</h1>
-            <div class="role">&lt; Full Stack Developer /&gt;</div>
-            <p class="bio">
-                Building scalable web applications and intelligent backend systems. 
-                Specialized in Python, Automation, and Voice-enabled interfaces.
-            </p>
-            
-            <div class="social-links">
-                <a href="https://github.com/Yuvraj1954" target="_blank" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/yuvraj-kumar-878b793a3" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto:yuvraj.k863888@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
+            <div class="header-content">
+                
+                <img src="profile_image.png" alt="Yuvraj Kumar" class="profile-img">
+                
+                <div class="header-text">
+                    <h1>Yuvraj Kumar</h1>
+                    <div class="role">&lt; Full Stack Developer /&gt;</div>
+                    <p class="bio">
+                        Building scalable web applications and intelligent backend systems. 
+                        Specialized in Python, Automation, and Voice-enabled interfaces.
+                    </p>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/Yuvraj1954" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yuvraj-kumar-878b793a3" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:yuvraj.k863888@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </header>
 
